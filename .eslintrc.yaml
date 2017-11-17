@@ -1,0 +1,17 @@
+---
+extends: [standard]
+env:
+  browser: true
+  node: true
+  es6: true
+parserOptions:
+  ecmaFeatures:
+    modules: true
+rules:
+  camelcase: [2]
+  no-var: [1]
+  prefer-const: [1]
+  comma-dangle: [2, always-multiline]
+  curly: [2, all]
+  max-len: [2, 120, 2]
+  no-extra-bind: [2]

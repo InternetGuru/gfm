@@ -1,0 +1,24 @@
+{
+  "name": "gfm",
+  "version": "0.0.0",
+  "description": "Git Flow Manager",
+  "main": "index.js",
+  "repository": "git@github.com:InternetGuru/gfm.git",
+  "author": "Jiří Pavelka <jiri.pavelka@internetguru.cz>",
+  "contributors": [
+    "Pavel Petržela <pavel.petrzela@internetguru.cz>",
+    "Jan Vlnas <jan.vlnas@internetguru.cz>"
+  ],
+  "license": "GPL-3.0",
+  "scripts": {
+    "test": "ava --verbose"
+  },
+  "devDependencies": {
+    "eslint": "~4.11.0",
+    "eslint-config-standard": "~10.2.1",
+    "eslint-plugin-import": "~2.8.0",
+    "eslint-plugin-node": "~5.2.1",
+    "eslint-plugin-promise": "~3.6.0",
+    "eslint-plugin-standard": "~3.0.1"
+  }
+}
