@@ -85,8 +85,7 @@ function getOptions () {
     validateOptions(options)
     return options
   } catch (err) {
-    console.log(err.message)
-    process.exit(2)
+    throw new Error(err.message, config.errors.argumentError)
   }
 }
 
