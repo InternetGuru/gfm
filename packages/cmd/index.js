@@ -117,7 +117,7 @@ function validateOptions (options) {
     }
   }
   // allow null
-  if (options.color && !(options.color in config.colors)) {
+  if (options.color && !g.isValidColor(options.color)) {
     throw new Error(`Option color has wrong value`)
   }
 }
