@@ -2,7 +2,6 @@
 
 const commandLineArgs = require('command-line-args')
 const commandLineUsage = require('command-line-usage')
-const config = require('../config')
 const g = require('../globals')
 const ArgumentError = require('../error/ArgumentError')
 
