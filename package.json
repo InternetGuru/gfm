@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "ava": "^0.23.0",
-    "command-line-args": "^4.0.7"
+    "command-line-args": "^4.0.7",
+    "command-line-usage": "^4.0.1"
   }
 }

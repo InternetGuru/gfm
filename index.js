@@ -1,18 +1,15 @@
 'use strict'
 
-const config = require('./packages/config')
 const cmd = require('./packages/cmd')
+const ArgumentError = require('./packages/error/ArgumentError')
 
 try {
   const options = cmd.getOptions()
   console.log(options)
 } catch (err) {
-  let exitCode = 1
-  switch (err.name) {
-    case config.errors.argumentError:
-      exitCode = 2
-      break
+  console.log(err.message)
+  if (err instanceof ArgumentError) {
+    console.log(cmd.getUsage())
   }
-  console.log(err.toString())
-  process.exit(exitCode)
+  process.exit(err.status)
 }

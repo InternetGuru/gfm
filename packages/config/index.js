@@ -13,7 +13,4 @@ module.exports = {
     never: 'never',
     always: 'always',
   },
-  errors: {
-    argumentError: 'argumentError',
-  },
 }

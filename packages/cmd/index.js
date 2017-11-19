@@ -1,8 +1,10 @@
 'use strict'
 
 const commandLineArgs = require('command-line-args')
+const commandLineUsage = require('command-line-usage')
 const config = require('../config')
 const g = require('../globals')
+const ArgumentError = require('../error/ArgumentError')
 
 const optionDefinitions = [
   {
@@ -79,13 +81,24 @@ const optionDefinitions = [
   },
 ]
 
+const usageDefinition = [
+  {
+    header: 'Synopsis',
+    content: 'omgf [-cfhinrvVwy] [--color[=WHEN]] [KEYWORD] [NAME]',
+  },
+  {
+    header: 'Options',
+    optionList: optionDefinitions,
+  },
+]
+
 function getOptions () {
   try {
     const options = commandLineArgs(optionDefinitions)
     validateOptions(options)
     return options
   } catch (err) {
-    throw new Error(err.message, config.errors.argumentError)
+    throw new ArgumentError(err.message)
   }
 }
 
@@ -104,4 +117,9 @@ function validateOptions (options) {
   }
 }
 
+function getUsage () {
+  return commandLineUsage(usageDefinition)
+}
+
 exports.getOptions = getOptions
+exports.getUsage = getUsage
