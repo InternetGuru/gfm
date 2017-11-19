@@ -2,7 +2,7 @@
 
 const commandLineArgs = require('command-line-args')
 const commandLineUsage = require('command-line-usage')
-const g = require('../globals')
+const utils = require('../utils')
 const ArgumentError = require('../error/ArgumentError')
 
 const optionDefinitions = [
@@ -111,12 +111,12 @@ function validateOptions (options) {
     if (options.params.length > 2) {
       throw new Error('Wrong number of parameters')
     }
-    if (options.params.length === 2 && !g.isValidKeyword(options.params[0])) {
+    if (options.params.length === 2 && !utils.isValidKeyword(options.params[0])) {
       throw new Error(`Parametr '${options.params[0]}' is not a valid keyword`)
     }
   }
   // allow null
-  if (options.color && !g.isValidColor(options.color)) {
+  if (options.color && !utils.isValidColor(options.color)) {
     throw new Error(`Option color has wrong value`)
   }
 }
