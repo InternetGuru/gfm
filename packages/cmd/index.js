@@ -22,6 +22,7 @@ const optionDefinitions = [
   {
     name: 'color',
     type: String,
+    typeLabel: '[underline]{WHEN}',
     description: 'Use markers to highlight command status; WHEN is \'always\', \'never\', or \'auto\'.' +
     ' Empty WHEN sets color to \'always\'. Default color value is \'auto\'.',
   },
@@ -89,6 +90,10 @@ const usageDefinition = [
   {
     header: 'Options',
     optionList: optionDefinitions,
+    hide: 'params',
+    options: {
+      noWrap: true,
+    },
   },
 ]
 
