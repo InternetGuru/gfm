@@ -7,9 +7,9 @@ try {
   const options = cmd.getOptions()
   console.log(options)
 } catch (err) {
-  console.log(err.message)
+  console.error(err.message)
   if (err instanceof ArgumentError) {
-    console.log(cmd.getUsage())
+    console.error(cmd.getUsage())
   }
   process.exit(err.status)
 }
