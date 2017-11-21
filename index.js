@@ -1,8 +1,8 @@
 'use strict'
 
-const cmd = require('./packages/cmd')
-const validate = require('./packages/validate')
-const ArgumentError = require('./packages/error/ArgumentError')
+const cmd = require('./src/cmd')
+const validate = require('./src/validate')
+const ArgumentError = require('./src/error/ArgumentError')
 
 async function main () {
   const options = cmd.getOptions()
